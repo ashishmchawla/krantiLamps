@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./theme/scss/main.scss";
+import TopBar from "./components/headerComponents/TopBar";
 
 function App() {
     return (
