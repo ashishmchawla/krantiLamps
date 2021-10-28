@@ -5,7 +5,7 @@ const Navigation = () => {
     return (
         <Navbar sticky="top" bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse
                     id="basic-navbar-nav"

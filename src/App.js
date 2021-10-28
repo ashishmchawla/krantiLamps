@@ -1,14 +1,14 @@
-import "./theme/scss/main.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
-import TopBar from "./components/headerComponents/TopBar";
-import Navigation from "./components/headerComponents/Navigation";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
     return (
-        <div className="App">
-            <TopBar />
-            <Navigation />
-        </div>
+        <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/about" component={About} />
+        </Switch>
     );
 }
 
