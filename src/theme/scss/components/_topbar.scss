@@ -1,0 +1,25 @@
+.top-bar {
+    background: $primary-color;
+    background: linear-gradient(
+        90deg,
+        $primary-color 0%,
+        $secondary-color 100%
+    );
+    &__items {
+        display: inline;
+        flex-direction: row;
+        font-size: 10px;
+    }
+    a.top-bar__item {
+        display: inline-flex;
+        align-content: space-between;
+        padding-right: 10px;
+        text-decoration: none;
+        padding: 1%;
+        color: $white;
+    }
+    .top-bar__item__icon {
+        padding-right: 5px;
+        font-size: 14px;
+    }
+}
