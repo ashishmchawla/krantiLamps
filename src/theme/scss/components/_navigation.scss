@@ -1,8 +1,8 @@
 .navbar-nav {
-    a.nav-link {
+    .nav-link {
         font-size: 14px;
         :hover {
-            color: $secondary-color;
+            color: $secondary-color !important;
         }
     }
 }
