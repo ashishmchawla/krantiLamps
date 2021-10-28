@@ -76,7 +76,7 @@ const AboutComponent = () => {
                                 energy-efficient lighting, Kranti LED Lamp is
                                 proving to be one of the largest contributors to
                                 the ongoing, environmentally-friendly LED
-                                revolution…ˀ
+                                revolution…
                             </p>
                             <Button className="primary_btn" href="/about">
                                 Read More
