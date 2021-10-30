@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
 import { FaRocket, FaEye, FaRegGem } from "react-icons/fa";
+import aboutImg from "../../theme/images/aboutImg.png";
 
 const AboutComponent = () => {
     return (
@@ -65,24 +66,28 @@ const AboutComponent = () => {
                 <Container className="about-container">
                     <Row>
                         <Col lg={6} md={6} sm={12}>
-                            <p>
-                                Kranti LED Lamps was established in 1995 by the
-                                founder Mr Ramakant Mukund Jadhav. Kranti LED
-                                Lamps has a history of 25 years of quality and
-                                satisfied customers.
-                            </p>
-                            <p>
-                                Driven by the increasing demand for
-                                energy-efficient lighting, Kranti LED Lamp is
-                                proving to be one of the largest contributors to
-                                the ongoing, environmentally-friendly LED
-                                revolution…
-                            </p>
-                            <Button className="primary_btn" href="/about">
-                                Read More
-                            </Button>
+                            <div className="about-textarea">
+                                <p>
+                                    Kranti LED Lamps was established in 1995 by
+                                    the founder Mr Ramakant Mukund Jadhav.
+                                    Kranti LED Lamps has a history of 27 years
+                                    of quality and satisfied customers.
+                                </p>
+                                <p>
+                                    Driven by the increasing demand for
+                                    energy-efficient lighting, Kranti LED Lamp
+                                    is proving to be one of the largest
+                                    contributors to the ongoing,
+                                    environmentally-friendly LED revolution…
+                                </p>
+                                <Button className="primary_btn" href="/about">
+                                    Read More
+                                </Button>
+                            </div>
                         </Col>
-                        <Col lg={6} md={6} sm={12}></Col>
+                        <Col lg={6} md={6} sm={12}>
+                            <Image src={aboutImg} fluid rounded />
+                        </Col>
                     </Row>
                 </Container>
             </div>

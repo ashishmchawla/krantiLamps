@@ -22,7 +22,7 @@
 }
 @media only screen and (min-width: 768px) {
     .about-card {
-        margin-top: -15%;
+        margin-top: -10%;
         z-index: 10;
     }
 }
@@ -43,5 +43,8 @@
         p {
             font-size: 12px;
         }
+    }
+    .about-textarea {
+        padding-top: 5%;
     }
 }

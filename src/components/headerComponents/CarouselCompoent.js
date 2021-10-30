@@ -1,8 +1,12 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import firstImage from "../../theme/images/1.png";
-import secondImage from "../../theme/images/2.png";
-import thirdImage from "../../theme/images/3.png";
+import fifthImage from "../../theme/images/5.png";
+import sixthImage from "../../theme/images/6.png";
+import seventhImage from "../../theme/images/7.png";
+import eigththImage from "../../theme/images/8.png";
+import ninethImage from "../../theme/images/9.png";
+import tenthImage from "../../theme/images/10.png";
+import eleventhImage from "../../theme/images/11.png";
 
 const CarouselCompoent = () => {
     return (
@@ -11,45 +15,51 @@ const CarouselCompoent = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={firstImage}
-                        alt="First slide"
+                        src={fifthImage}
+                        alt="Fifth slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Welcome to Kranti Lamps</h3>
-                        <p>
-                            We are one of the leading Manufacturers of LED
-                            Lamps.
-                        </p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={secondImage}
-                        alt="Second slide"
+                        src={sixthImage}
+                        alt="Sixth slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Welcome to Kranti Lamps</h3>
-                        <p>
-                            With Product range from 0.5 watt Decorative Lamps to
-                            200 watt Outdoor Luminaries.
-                        </p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={thirdImage}
-                        alt="Third slide"
+                        src={seventhImage}
+                        alt="Seventh slide"
                     />
-                    <Carousel.Caption>
-                        <h3>Welcome to Kranti Lamps</h3>
-                        <p>
-                            Our key focus and relentless effort has been to
-                            deliver Products with utmost innovation and Quality.
-                            This is what sets us apart from the competitors.
-                        </p>
-                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={eigththImage}
+                        alt="Eightth slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={ninethImage}
+                        alt="Nineth slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={tenthImage}
+                        alt="Tenth slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={eleventhImage}
+                        alt="Eleventh slide"
+                    />
                 </Carousel.Item>
             </Carousel>
         </div>
