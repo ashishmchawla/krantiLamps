@@ -3,6 +3,7 @@ import TopBar from "../components/headerComponents/TopBar";
 import Navigation from "../components/headerComponents/Navigation";
 import CarouselComponent from "../components/headerComponents/CarouselCompoent";
 import AboutComponent from "../components/homeComponents/AboutComponent";
+import Contact from "../components/homeComponents/Contact";
 
 const Home = () => {
     return (
@@ -11,7 +12,7 @@ const Home = () => {
             <Navigation />
             <CarouselComponent />
             <AboutComponent />
-            <div> Home Page </div>
+            <Contact />
         </div>
     );
 };

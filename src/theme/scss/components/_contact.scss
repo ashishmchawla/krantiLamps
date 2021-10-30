@@ -1,0 +1,16 @@
+.contact__heading {
+    margin: 4%;
+    text-align: center;
+    h6 {
+        color: $primary-color;
+        text-transform: uppercase;
+    }
+    h2 {
+        text-transform: capitalize;
+    }
+}
+.address__list {
+    .address__main {
+        display: inline;
+    }
+}
