@@ -9,8 +9,19 @@
         text-transform: capitalize;
     }
 }
-.address__list {
-    .address__main {
-        display: inline;
+.address__main {
+    p {
+        font-size: 14px;
+    }
+}
+.address__phone {
+    a {
+        text-decoration: underline;
+        font-size: 14px;
+        color: #212529;
+    }
+    .address__phone__icon {
+        padding-right: 5px;
+        font-size: 16px;
     }
 }

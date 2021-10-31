@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
     return (
@@ -27,20 +27,22 @@ const Contact = () => {
                         <Col lg={1} md={1}></Col>
                         <Col lg={7} md={7} sm={12}>
                             <div className="address">
-                                <ul className="address__list" type="none">
-                                    <li>
-                                        <div className="address__main">
-                                            <FaMapMarkerAlt />
-                                            <p>
-                                                Ramakant Industrial estate,
-                                                <br /> B-11, Anand Nagar,
-                                                <br /> Ashele Pada,
-                                                <br />
-                                                Ulhasnagar -421004
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <div className="address__main">
+                                    <FaMapMarkerAlt className="address__main__icon" />
+                                    <p className="address__main__content">
+                                        Ramakant Industrial estate,
+                                        <br /> B-11, Anand Nagar,
+                                        <br /> Ashele Pada,
+                                        <br />
+                                        Ulhasnagar -421004
+                                    </p>
+                                </div>
+                                <div className="address__phone">
+                                    <a href="tel:0251 2580074">
+                                        <FaPhoneAlt className="address__phone__icon" />
+                                        0251-2580074
+                                    </a>
+                                </div>
                             </div>
                         </Col>
                     </Row>
