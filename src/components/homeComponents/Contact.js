@@ -9,9 +9,31 @@ import {
     Alert,
 } from "react-bootstrap";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { recordEntry } from "../../axios/contactForm";
 
 const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
+
+    async function triggerSubmit() {
+        if (name.length > 0 && email.length > 0 && message.length > 0) {
+            const response = await recordEntry(name, email, message);
+            console.log(response);
+        } else {
+        }
+    }
+
+    const onInputName = ({ target: { value } }) => {
+        setName(value);
+    };
+    const onInputEmail = ({ target: { value } }) => {
+        setEmail(value);
+    };
+    const onInputMessage = ({ target: { value } }) => {
+        setMessage(value);
+    };
     return (
         <div className="contact">
             <div className="contact__heading">
@@ -95,6 +117,9 @@ const Contact = () => {
                                                             required
                                                             type="text"
                                                             placeholder="Name"
+                                                            onChange={
+                                                                onInputName
+                                                            }
                                                         />
                                                     </FloatingLabel>
                                                 </>
@@ -109,6 +134,9 @@ const Contact = () => {
                                                             required
                                                             type="email"
                                                             placeholder="Email"
+                                                            onChange={
+                                                                onInputEmail
+                                                            }
                                                         />
                                                     </FloatingLabel>
                                                 </>
@@ -126,12 +154,20 @@ const Contact = () => {
                                                         style={{
                                                             height: "100px",
                                                         }}
+                                                        onChange={
+                                                            onInputMessage
+                                                        }
                                                     />
                                                 </FloatingLabel>
                                             </Col>
                                         </Row>
                                         <br />
-                                        <Button>Send</Button>
+                                        <Button
+                                            type="submit"
+                                            onClick={triggerSubmit}
+                                        >
+                                            Send
+                                        </Button>
                                     </Container>
                                 ) : (
                                     <div className="form__success">

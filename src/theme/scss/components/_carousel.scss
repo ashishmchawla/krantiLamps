@@ -2,8 +2,8 @@
     color: $secondary-color;
     margin-bottom: 5%;
 }
-.carousel-item > img {
-    max-height: 500px;
+.carousel-indicators {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {

@@ -6,9 +6,10 @@
         $secondary-color 100%
     );
     &__items {
-        display: inline;
+        display: flex;
         flex-direction: row;
         font-size: 10px;
+        justify-content: flex-end;
     }
     a.top-bar__item {
         display: inline-flex;
