@@ -11,7 +11,7 @@ export async function recordEntry(name, email, message) {
             "https://www.krantilamps.com/form_response.php",
             bodyFormData
         );
-        console.log(entryRecorded);
+        return entryRecorded.data;
     } catch (error) {
         console.log(error);
         return false;

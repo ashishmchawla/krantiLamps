@@ -6,6 +6,7 @@ import {
     Form,
     FloatingLabel,
     Button,
+    Toast,
     Alert,
 } from "react-bootstrap";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
@@ -16,12 +17,19 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [show, setShow] = useState(false);
+    const [show2, setShow2] = useState(false);
 
     async function triggerSubmit() {
         if (name.length > 0 && email.length > 0 && message.length > 0) {
             const response = await recordEntry(name, email, message);
-            console.log(response);
+            if (response && response === 1) {
+                setFormSubmitted(true);
+            } else {
+                setShow(true);
+            }
         } else {
+            setShow2(true);
         }
     }
 
@@ -36,6 +44,28 @@ const Contact = () => {
     };
     return (
         <div className="contact">
+            <Toast
+                onClose={() => setShow(false)}
+                show={show}
+                delay={3000}
+                autohide
+            >
+                <Toast.Header>
+                    <strong className="me-auto">Warning!</strong>
+                </Toast.Header>
+                <Toast.Body>Something went wrong, please try again.</Toast.Body>
+            </Toast>{" "}
+            <Toast
+                onClose={() => setShow2(false)}
+                show={show2}
+                delay={3000}
+                autohide
+            >
+                <Toast.Header>
+                    <strong className="me-auto">Error!</strong>
+                </Toast.Header>
+                <Toast.Body>Please fill the form</Toast.Body>
+            </Toast>
             <div className="contact__heading">
                 <h6>Where are we</h6>
                 <h2>Contact Us</h2>
