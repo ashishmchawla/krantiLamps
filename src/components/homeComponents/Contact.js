@@ -7,6 +7,7 @@ import {
     FloatingLabel,
     Button,
     Toast,
+    ToastContainer,
     Alert,
 } from "react-bootstrap";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
@@ -44,28 +45,6 @@ const Contact = () => {
     };
     return (
         <div className="contact">
-            <Toast
-                onClose={() => setShow(false)}
-                show={show}
-                delay={3000}
-                autohide
-            >
-                <Toast.Header>
-                    <strong className="me-auto">Warning!</strong>
-                </Toast.Header>
-                <Toast.Body>Something went wrong, please try again.</Toast.Body>
-            </Toast>{" "}
-            <Toast
-                onClose={() => setShow2(false)}
-                show={show2}
-                delay={3000}
-                autohide
-            >
-                <Toast.Header>
-                    <strong className="me-auto">Error!</strong>
-                </Toast.Header>
-                <Toast.Body>Please fill the form</Toast.Body>
-            </Toast>
             <div className="contact__heading">
                 <h6>Where are we</h6>
                 <h2>Contact Us</h2>
@@ -87,6 +66,41 @@ const Contact = () => {
                         </Col>
 
                         <Col lg={{ span: 7, offset: 1 }} sm={12}>
+                            <ToastContainer
+                                className="p-3"
+                                position="bottom-end"
+                            >
+                                <Toast
+                                    onClose={() => setShow(false)}
+                                    show={show}
+                                    delay={3000}
+                                    autohide
+                                >
+                                    <Toast.Header>
+                                        <strong className="me-auto">
+                                            Warning!
+                                        </strong>
+                                    </Toast.Header>
+                                    <Toast.Body>
+                                        Something went wrong, please try again.
+                                    </Toast.Body>
+                                </Toast>{" "}
+                                <Toast
+                                    onClose={() => setShow2(false)}
+                                    show={show2}
+                                    delay={3000}
+                                    autohide
+                                >
+                                    <Toast.Header>
+                                        <strong className="me-auto">
+                                            Error!
+                                        </strong>
+                                    </Toast.Header>
+                                    <Toast.Body>
+                                        Please fill the form
+                                    </Toast.Body>
+                                </Toast>
+                            </ToastContainer>
                             <Container>
                                 <div className="address">
                                     <div className="address__main">
