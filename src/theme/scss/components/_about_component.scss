@@ -6,6 +6,11 @@
     padding: 5%;
     height: 300px;
     border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    margin-top: 1%;
     &__icon {
         background-color: $primary-color;
         width: 50px;
@@ -47,4 +52,18 @@
     .about-textarea {
         padding-top: 5%;
     }
+}
+.contact__content__map {
+    margin-bottom: 1%;
+}
+// About Page
+.about__page__title {
+    text-align: center;
+    margin: 1%;
+}
+.about__page {
+    font-size: 14px;
+}
+.about__page__founder__title {
+    margin-bottom: 0px;
 }

@@ -1,8 +1,17 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import {
+    Container,
+    Row,
+    Col,
+    Form,
+    FloatingLabel,
+    Button,
+    Alert,
+} from "react-bootstrap";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
+    const [formSubmitted, setFormSubmitted] = useState(false);
     return (
         <div className="contact">
             <div className="contact__heading">
@@ -18,7 +27,7 @@ const Contact = () => {
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1342.1905869659822!2d73.15230206090054!3d19.21393583585121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be79597b698ca81%3A0x422f5592f2427a66!2sKranti%20Led%20Lamp!5e0!3m2!1sen!2sin!4v1635587670844!5m2!1sen!2sin"
                                     width="400"
                                     title="Location"
-                                    height="300"
+                                    height="400"
                                     allowfullscreen=""
                                     loading="lazy"
                                 ></iframe>
@@ -26,47 +35,112 @@ const Contact = () => {
                         </Col>
 
                         <Col lg={{ span: 7, offset: 1 }} sm={12}>
-                            <div className="address">
-                                <div className="address__main">
-                                    <Row>
-                                        <Col
-                                            lg={1}
-                                            className="address__main__icon__section"
-                                        >
-                                            <FaMapMarkerAlt className="address__main__icon" />
-                                        </Col>
-                                        <Col
-                                            lg={11}
-                                            className="address__main__content__section"
-                                        >
-                                            <p className="address__main__content">
-                                                Ramakant Industrial estate,
-                                                <br /> B-11, Anand Nagar,
-                                                <br /> Ashele Pada,
-                                                <br />
-                                                Ulhasnagar -421004
-                                            </p>
-                                        </Col>
-                                    </Row>
-                                </div>
-                                <div className="address__phone">
-                                    <a href="tel:0251 2580074">
+                            <Container>
+                                <div className="address">
+                                    <div className="address__main">
                                         <Row>
                                             <Col
                                                 lg={1}
                                                 className="address__main__icon__section"
                                             >
-                                                <FaPhoneAlt className="address__phone__icon" />
+                                                <FaMapMarkerAlt className="address__main__icon" />
                                             </Col>
                                             <Col
                                                 lg={11}
                                                 className="address__main__content__section"
                                             >
-                                                0251-2580074{" "}
+                                                <p className="address__main__content">
+                                                    Ramakant Industrial estate,
+                                                    <br /> B-11, Anand Nagar,
+                                                    <br /> Ashele Pada,
+                                                    <br />
+                                                    Ulhasnagar -421004
+                                                </p>
                                             </Col>
                                         </Row>
-                                    </a>
+                                    </div>
+                                    <div className="address__phone">
+                                        <a href="tel:0251 2580074">
+                                            <Row>
+                                                <Col
+                                                    lg={1}
+                                                    className="address__main__icon__section"
+                                                >
+                                                    <FaPhoneAlt className="address__phone__icon" />
+                                                </Col>
+                                                <Col
+                                                    lg={11}
+                                                    className="address__main__content__section"
+                                                >
+                                                    0251-2580074{" "}
+                                                </Col>
+                                            </Row>
+                                        </a>
+                                    </div>
                                 </div>
+                            </Container>
+                            <hr />
+                            <div className="contact__form">
+                                {formSubmitted === false ? (
+                                    <Container>
+                                        <h6>Let us contact you</h6>
+                                        <Row>
+                                            <Col lg={6} sm={12}>
+                                                <>
+                                                    <FloatingLabel
+                                                        controlId="floatingInput"
+                                                        label="Name"
+                                                    >
+                                                        <Form.Control
+                                                            required
+                                                            type="text"
+                                                            placeholder="Name"
+                                                        />
+                                                    </FloatingLabel>
+                                                </>
+                                            </Col>
+                                            <Col lg={6} sm={12}>
+                                                <>
+                                                    <FloatingLabel
+                                                        controlId="floatingEmail"
+                                                        label="Email"
+                                                    >
+                                                        <Form.Control
+                                                            required
+                                                            type="email"
+                                                            placeholder="Email"
+                                                        />
+                                                    </FloatingLabel>
+                                                </>
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col lg={12} sm={12}>
+                                                <FloatingLabel
+                                                    controlId="floatingMessage"
+                                                    label="Leave a comment here"
+                                                >
+                                                    <Form.Control
+                                                        as="textarea"
+                                                        placeholder="Leave a comment here"
+                                                        style={{
+                                                            height: "100px",
+                                                        }}
+                                                    />
+                                                </FloatingLabel>
+                                            </Col>
+                                        </Row>
+                                        <br />
+                                        <Button>Send</Button>
+                                    </Container>
+                                ) : (
+                                    <div className="form__success">
+                                        <Alert variant="success">
+                                            We got your message, we'll reach out
+                                            to you soon.
+                                        </Alert>
+                                    </div>
+                                )}
                             </div>
                         </Col>
                     </Row>
