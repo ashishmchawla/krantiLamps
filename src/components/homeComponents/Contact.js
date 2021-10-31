@@ -12,7 +12,7 @@ const Contact = () => {
             <div className="contact__content">
                 <Container>
                     <Row>
-                        <Col lg={4} md={4} sm={12}>
+                        <Col lg={4} sm={12}>
                             <div className="contact__content__map">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1342.1905869659822!2d73.15230206090054!3d19.21393583585121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be79597b698ca81%3A0x422f5592f2427a66!2sKranti%20Led%20Lamp!5e0!3m2!1sen!2sin!4v1635587670844!5m2!1sen!2sin"
@@ -24,23 +24,47 @@ const Contact = () => {
                                 ></iframe>
                             </div>
                         </Col>
-                        <Col lg={1} md={1}></Col>
-                        <Col lg={7} md={7} sm={12}>
+
+                        <Col lg={{ span: 7, offset: 1 }} sm={12}>
                             <div className="address">
                                 <div className="address__main">
-                                    <FaMapMarkerAlt className="address__main__icon" />
-                                    <p className="address__main__content">
-                                        Ramakant Industrial estate,
-                                        <br /> B-11, Anand Nagar,
-                                        <br /> Ashele Pada,
-                                        <br />
-                                        Ulhasnagar -421004
-                                    </p>
+                                    <Row>
+                                        <Col
+                                            lg={1}
+                                            className="address__main__icon__section"
+                                        >
+                                            <FaMapMarkerAlt className="address__main__icon" />
+                                        </Col>
+                                        <Col
+                                            lg={11}
+                                            className="address__main__content__section"
+                                        >
+                                            <p className="address__main__content">
+                                                Ramakant Industrial estate,
+                                                <br /> B-11, Anand Nagar,
+                                                <br /> Ashele Pada,
+                                                <br />
+                                                Ulhasnagar -421004
+                                            </p>
+                                        </Col>
+                                    </Row>
                                 </div>
                                 <div className="address__phone">
                                     <a href="tel:0251 2580074">
-                                        <FaPhoneAlt className="address__phone__icon" />
-                                        0251-2580074
+                                        <Row>
+                                            <Col
+                                                lg={1}
+                                                className="address__main__icon__section"
+                                            >
+                                                <FaPhoneAlt className="address__phone__icon" />
+                                            </Col>
+                                            <Col
+                                                lg={11}
+                                                className="address__main__content__section"
+                                            >
+                                                0251-2580074{" "}
+                                            </Col>
+                                        </Row>
                                     </a>
                                 </div>
                             </div>
