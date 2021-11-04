@@ -69,9 +69,9 @@ const AboutComponent = () => {
                             <div className="about-textarea">
                                 <p>
                                     Kranti LED Lamps was established in 1995 by
-                                    the founder Mr Ramakant Mukund Jadhav.
-                                    Kranti LED Lamps has a history of 27 years
-                                    of quality and satisfied customers.
+                                    Mr Ramakant Mukund Jadhav. Kranti LED Lamps
+                                    has a history of 27 years of quality and
+                                    satisfied customers.
                                 </p>
                                 <p>
                                     Driven by the increasing demand for
