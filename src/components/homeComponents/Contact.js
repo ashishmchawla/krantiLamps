@@ -56,7 +56,7 @@ const Contact = () => {
                             <div className="contact__content__map">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1342.1905869659822!2d73.15230206090054!3d19.21393583585121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be79597b698ca81%3A0x422f5592f2427a66!2sKranti%20Led%20Lamp!5e0!3m2!1sen!2sin!4v1635587670844!5m2!1sen!2sin"
-                                    width="400"
+                                    width="500"
                                     title="Location"
                                     height="400"
                                     allowfullscreen=""

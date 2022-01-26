@@ -1,0 +1,30 @@
+.productPage {
+  .productPage__breadcrum {
+    margin-top: 2vh;
+  }
+  .productPage__row {
+    margin-top: 2vh;
+  }
+  .productPage__imageContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    width: 50%;
+  }
+  .productPage__description {
+    span {
+      font-size: 16px;
+      padding-bottom: 10vh;
+    }
+  }
+  .productPage__featureList {
+    padding-left: 0rem;
+    li {
+      list-style: none;
+    }
+    li:before {
+      content: "\27F6   ";
+    }
+  }
+}
