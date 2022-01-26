@@ -34,6 +34,7 @@ const Products = () => {
                 className="productPage__imageContainer__image"
                 src={productImage}
                 alt="Product text"
+                fluid={true}
               />
             </div>
           </Col>
